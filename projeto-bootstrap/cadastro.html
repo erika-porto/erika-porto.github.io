@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <!-- letras do google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap" rel="stylesheet">
+
+
+    <!-- links boostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- links css -->
+
+    <link rel="stylesheet" href="../projeto-bootstrap/css/cadastro.css">
+
+
+    <title>Fale conosco</title>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!---------------------HEADER--------------------->
+        <header class="row">
+            <nav class="navbar navbar-expand-lg navbar  fixed-top" style="background-color: #203a68;">
+                <a class="navbar-brand">
+                    <img src="../projeto-bootstrap/imagens/lotus2.jpeg" alt="logomarca" style="width: 8vw;">
+                </a>
+                <button class="navbar-toggler btn-outline-secondary text-light" data-target="#my-nav"
+                    data-toggle="collapse" aria-controls="my-nav" aria-expanded="false"
+                    aria-label="Toggle navigation">MENU
+                </button>
+                <div id="my-nav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <!--uso do text-uppercase-->
+                            <a class="nav-link text-uppercase text-light listas" href="index.html">Home<span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link text-light listas" href="quemsomos.html">QUEM SOMOS<span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link text-light listas" href="servicos.html">SERVIÇOS<span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link text-light listas" href="cadastro.html">FALE CONOSCO<span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                    <div class="col-lg-3 redesSociais text-right">
+                        <a href="https://api.whatsapp.com/send/?phone=558599818820&text&app_absent=0"
+                            target="blanket"><img src="imagens/icons8-whatsapp-64.png" alt="" id="whatsapp"
+                                style="width: 35px;height: 35px;" class="text-right linkMidia"></i></a>
+
+                        <a href="https://instagram.com/lotusengenharia_ce?igshid=1gtdbctu514dg" target="blanket"
+                            class="linkMidia"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                viewBox="0 0 24 24" fill="none" stroke="#f5f5f5" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-instagram">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" class="linkMidia"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg></i></a>
+
+                        <a href="" class="linkMidia"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                viewBox="0 0 24 24" fill="none" stroke="whitesmoke" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"
+                                class="linkMidia">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg></i></a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 mt-5">
+                    <h1 class="mt-5 text-center tituloCadastro mb-5">FALE CONOSCO</h1>
+                    <form class="needs-validation cadastro" name="cad">
+                        <div class="form-row justify-content-center">
+                            <div class="col-md-5 col-sm-5 mb-3 mt-5 p-3">
+                                <label for="validationTooltip01">Nome</label>
+                                <input type="text" class="form-control" id="validationTooltip01" required>
+                                <div class="valid-tooltip">
+                                    correto!
+                                </div>
+                            </div>
+                            <div class="col-md-5 col-sm-5 mb-3 mt-5 p-3">
+                                <label for="validationTooltip02">Sobrenome</label>
+                                <input type="text" class="form-control" id="validationTooltip02" required>
+                                <div class="valid-tooltip">
+                                    correto!
+                                </div>
+                            </div>
+                            <div class="form-group  col-lg-10 col-md-10 col-sm-10 p-3" name="email">
+                                <label for="inputEmail4">Email</label>
+                                <input type="email" class="form-control" id="email" onblur="validaEmail()" required>
+                                <div id="msgemail"></div>
+
+                                <script>
+                                    function validaEmail() {
+                                        let email = document.forms.cad.email
+                                            .value; //cria variável e específica seu lugar no html
+                                        let isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
+                                            email); //cria variável para o formato válido de email
+                                        if (!isValid) { //se NÃO FOR válido então mudo a cor e dou alerta
+
+                                            alert("E-mail inválido-Não esqueça do @");
+                                        }
+                                    }
+                                </script>
+                                
+                            </div>
+                            <div class="form-group  col-lg-5 col-md-10 col-sm-10 p-3">
+                                <label for="ramoatuacao">Ramo de atuação</label>
+                                <input type="email" class="form-control" id="ramoAtuacao" required>
+                            </div>
+                            <div class="form-group  col-lg-5 col-md-10 col-sm-10 p-3">
+                                <label for="Telefone">telefone</label>
+                                <input type="text" class="form-control" id="telefone" required>
+                            </div>
+
+                            <!---cpf ou cnpj-->
+
+                            <div class=" form-check-inline">
+                                <div class="col-lg-6 col-md-6 col-sm-6 ">
+                                    <label for="cpf">CPF</label>
+                                    <input name="cpf" type="text" class="form-control form-check-inline"
+                                        pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite no formato 111.222.333-44"
+                                        placeholder="Exemplo:111.222.333-44" onmouseout="formataCPF(this)"
+                                        onblur="return valida()">
+                                    <div id="cpfTxt"></div>
+
+                                    <script>
+                                        function formataCPF(cpf) {
+                                            const cpfAlvo = cpf //valor final que será passado na função
+                                            const cpfDigitado = cpf.value // valor definido pelo usuario
+                                            let
+                                                cpfNovo; // função que vai receber o cpfDigitado e fazer sua formatação
+
+                                            cpfNovo = cpfDigitado.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/,
+                                                function (regex, arg1, arg2, arg3, arg4) {
+                                                    return arg1 + '.' + arg2 + '.' + arg3 + '-' + arg4;
+                                                })
+
+                                            cpfAlvo.value = cpfNovo;
+                                        }
+
+                                        function valida() {
+                                            //elemento js que retorna falso se o input corresponde ao seu pattern
+                                            if (document.cad.cpf.validity.patternMismatch) {
+                                                document.getElementById("cpfTxt").innerHTML =
+                                                    "<font color='red';>CPF inválido. Exemplo válido: 111.222.333-44</font>";
+                                                alert("O CPF está incorreto");
+                                            } else {
+                                                document.getElementById("cpfTxt").innerHTML =
+                                                    "<font color='white'; text-shadow: '20px 20px white';>CPF válido"
+                                            }
+                                            return false;
+                                        };
+                                    </script>
+                                </div>
+                                <p>ou</p>
+                                <div class="col-lg-6 col-md-6 col-sm-6" id="cnpj">
+                                    <label for="cnpj">CNPJ</label>
+                                    <input name="cnpj" pattern="\d{2}.\d{3}.\d{3}/\d{4}-\d{2}" type="text"
+                                        placeholder="Exemplo:11.222.333/4444-55" title="Exemplo:11.222.333/4444-55"
+                                        class="form-control form-check-inline" onmouseout="formataCNPJ(this)"
+                                        onblur="return validaCNPJ(this)">
+
+                                    <div id="cnpjTxt"></div>
+                                    <script>
+                                        function formataCNPJ(cnpj) {
+                                            const cnpjAlvo = cnpj //valor final que será passado na função
+                                            const cnpjDigitado = cnpj.value // valor definido pelo usuario
+                                            let
+                                                cnpjNovo; // função que vai receber o cpfDigitado e fazer sua formatação
+
+                                            cnpjNovo = cnpjDigitado.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/,
+                                                function (regex, arg1, arg2, arg3, arg4, arg5) {
+                                                    return arg1 + '.' + arg2 + '.' + arg3 + '/' + arg4 + '-' +
+                                                        arg5;
+                                                })
+
+                                            cnpjAlvo.value = cnpjNovo;
+                                        }
+
+                                        function validaCNPJ() {
+                                            //elemento js que retorna falso se o input corresponde ao seu pattern
+                                            if (document.cad.cnpj.validity.patternMismatch) {
+                                                document.getElementById("cnpjTxt").innerHTML =
+                                                    "<font color='red';>CNPJ inválido. Exemplo válido: 11.222.333/4444-55</font>";
+                                                alert("O CNPJ está incorreto");
+                                            } else {
+                                                document.getElementById("cnpjTxt").innerHTML =
+                                                    "<font color='white'; text-shadow: '20px 20px white';>CNPJ válido"
+                                            }
+                                            return false;
+
+
+                                        };
+                                    </script>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-10 col-md-10 p-3">
+                                <label for="exampleFormControlTextarea1">Observações</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 cold-md-12 text-center mb-5">
+                            <button type="button" class="btn btn-primary btn-lg mt-5 mb-5 text-center">ENVIAR</button>
+                        </div>
+                     </div>
+                     </form>
+                 </div>
+                 </div>
+             </div>
+        </main>
+        <div style="width: 100%;text-align: center;">
+            <footer id="footer">
+                <div id="midiasSociais">
+                    <p style="text-align:center">FALE CONOSCO</p>
+                    <a href="https://api.whatsapp.com/send/?phone=558599818820&text&app_absent=0" target="blanket"><img
+                            src="imagens/icons8-whatsapp-64.png" alt="" id="whatsapp"
+                            style="width: 35px;height: 35px;"></i></a>
+                    <a href="https://instagram.com/lotusengenharia_ce?igshid=1gtdbctu514dg" target="blanket"> <img
+                            src="imagens/instagram.png" alt="" style="width: 35px;height: 35px;"></a>
+
+                    <a href=""><img src="imagens/facebook.png" alt=""
+                            style="width: 35px;height: 35px; margin-left: 15px;"></a>
+                    <a href=""><img src="imagens/email.png" alt="" style="width: 35px;height: 35px;margin-left:15px"></a>
+
+                    Email: lotusengenharia.ce@gmail.com
+                    </p>
+            </footer>
+        </div>
+    </div>
+
+
+    <!------------------------LINKS---------------------------------------->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="js.js"></script>
+
+
+</body>
+
+</html>

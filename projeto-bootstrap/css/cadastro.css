@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.mt-5 {
+    margin-top: 75px !important;
+}
+
+/*-----body----*/
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: #D9D9D9;
+    font-size: max(17px, 1vw) !important;
+    font-size: min(20px, 1vw);
+    height: auto;
+    box-sizing: border-box;
+
+}
+
+/*----------------HEADER-------------------*/
+
+
+header,
+nav {
+    background-color: #203a68;
+    font-size: max(25px, 1vw) !important;
+    font-size: min(20px, 1vw);
+    color: #f5f5f5;
+}
+
+
+/*----------------FOOTER----------------*/
+
+
+#copyright {
+
+    border: 1px solid white;
+    padding: 20px;
+    margin-left: 200px;
+    position: relative;
+
+}
+
+#midiasSociais {
+    margin: 20px;
+    font-size: 20px;
+    justify-content: center;
+}
+
+#footer {
+    font-size: max(35px, 3vw) !important;
+    font-size: min(25px, 3vw) !important;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #203a68;
+    color: whitesmoke;
+
+}
+
+#instagram,
+#facebook,
+#whatsapp {
+    margin: 15px;
+
+}
+
+#whatsapp {
+    width: 2.18rem;
+    height: 2.18rem;
+}
+
+/* -----titulos----- */
+.tituloCadastro::after,
+.tituloCadastro::before {
+    content: "";
+    width: 7rem;
+    height: 0.25rem;
+    background-color: blue;
+    display: block;
+    margin: 0.625rem auto;
+}
+
+
+
+/*---------------CADASTRO--------------------*/
+
+/*-----FORM--------*/
+.cadastro {
+    background-color: rgba(117, 117, 126, 0.496);
+    border-radius: 10px;
+    box-shadow: rgb(79, 79, 116) 5px 5px 5px;
+}
+
+@media(max-width:991px) {
+    .listas {
+        color: rgb(195, 223, 235) !important;
+    }
+}

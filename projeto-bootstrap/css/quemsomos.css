@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*-----body----*/
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: #9b9cd3;
+    font-size: max(17px, 1vw) !important;
+    font-size: min(20px, 1vw);
+    height: auto;
+    box-sizing: border-box;
+
+
+}
+
+/*----------------HEADER-------------------*/
+
+header,
+nav {
+    background-color: #203a68;
+    font-size: max(25px, 1vw) !important;
+    font-size: min(20px, 1vw);
+    color: #f5f5f5;
+
+}
+
+#logomarca {
+    width: 5% !important;
+    border: 1px solid;
+
+
+}
+
+.mt-5 {
+    margin-top: 75px !important;
+}
+
+
+
+/* -----textos---- */
+
+.tituloMissao {
+    font-size: max(30px, 10vw) !important;
+    font-size: min(30px, 5vw) !important;
+
+}
+
+.tituloMissao::after,
+.tituloMissao::before {
+    content: "";
+    width: 7rem;
+    height: 0.25rem;
+    background-color: rgba(255, 234, 0, 0.578);
+    display: block;
+    margin: 0.625rem auto;
+
+}
+
+.textoMissao {
+    font-size: max(20px, 2vw);
+    font-size: min(25px, 3vw);
+}
+
+
+/*----------------FOOTER----------------*/
+
+
+#copyright {
+
+    border: 1px solid white;
+    padding: 20px;
+    margin-left: 200px;
+    position: relative;
+
+}
+
+#midiasSociais {
+    margin: 20px;
+    font-size: 20px;
+    justify-content: center;
+}
+
+#footer {
+    font-size: max(35px, 3vw) !important;
+    font-size: min(25px, 3vw) !important;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #203a68;
+    color: whitesmoke;
+
+}
+
+#instagram,
+#facebook,
+#whatsapp {
+    margin: 15px;
+
+}
+
+#whatsapp {
+    width: 2.18rem;
+    height: 2.18rem;
+}
+
+/* -------efeito do fundador--------- */
+
+body {
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE66RTga_YiRb_Iy6apCqzhnz6hNSCTooETg&usqp=CAU') no-repeat center center;
+    background-size: 1400px auto;
+    /* background-position: 30%; */
+    background-attachment: fixed;
+}
+
+.text {
+    font-family: raleway;
+    font-size: 25px;
+    position: absolute center;
+    text-align: center;
+    padding-left: 0%;
+    color: rgb(248, 247, 247);
+    margin-top: 43px;
+}
+
+.text1 {
+    font-family: raleway;
+    font-size: 21px;
+    text-align: center;
+    margin-top: -20px;
+    color: rgb(253, 249, 249);
+}
+
+.image {
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    -webkit-border-radius: 75%;
+    -moz-border-radius: 75%;
+    box-shadow: 0 0 0 1px #eee;
+    background: url("https://images.unsplash.com/reserve/ysPfhVSzSP2m629CW0mw_selfPortrait.jpg?fit=crop&fm=jpg&h=700&q=80&w=1225") center center no-repeat;
+    background-size: cover;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: -30px;
+    align-content: center;
+}
+
+.trick {
+    display: inline-block;
+    vertical-align: middle;
+    height: 150px;
+}
+
+.image:hover {
+    box-shadow: 0px 5px 20px .9px #eceaea;
+}
+
+.image:hover {
+    -webkit-transform: scale(1.12);
+    transform: scale(1.12);
+    -webkit-transition: 1.6s ease-in-out;
+    transition: 1.6s ease-in-out;
+}
+
+.trick:hover img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+#overlay {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    padding: 0 0 0 0;
+    opacity: 1.0;
+    -webkit-transition: opacity 2.25s ease;
+    -moz-transition: opacity 10.25s ease;
+}
+
+#box:hover #overlay {
+    opacity: 1;
+}
+
+.panel-group {
+    width: 350px;
+    margin: auto;
+    /*margin:50px 400px 50px 400px;*/
+    max-width: 100%;
+}
+
+.panel-heading {
+    background-color: transparent !important;
+}
+
+.title {
+    text-align: center;
+    background-color: transparent;
+    color: rgb(250, 248, 248);
+    font-family: lato;
+    font-weight: 300;
+    font-size: 15px;
+    max-width: 100%;
+}
+
+#accordion {
+    background-color: transparent;
+    max-width: 100%;
+    margin-bottom: 200px;
+}
+
+.btn-outline {
+    color: inherit;
+    transition: all 1.4s;
+    background-color: transparent;
+}
+
+/* button CSS */
+
+.btn-danger.btn-outline {
+    margin-top: 9px;
+    background-color: transparent;
+    color: rgb(253, 251, 251);
+    border-color: rgb(252, 249, 249);
+    padding: auto;
+    padding: 10px 0px 10px 0px;
+    margin: 1px 5px 1px 0px;
+    width: 100%;
+    text-align: center;
+    font-family: raleway;
+    font-weight: 300;
+    max-width: 100%;
+}
+
+/* on hover placeholder */
+
+input:hover::-webkit-input-placeholder,
+textarea:hover::-webkit-input-placeholder {
+    color: #fff;
+    font-size: 15px;
+    font-family: raleway;
+}
+
+input:hover:focus::-webkit-input-placeholder,
+textarea:hover:focus::-webkit-input-placeholder {
+    color: #fff;
+    font-family: raleway;
+}
+
+input:hover::-moz-placeholder,
+textarea:hover::-moz-placeholder {
+    color: #fff;
+    font-size: 15px;
+    font-family: raleway;
+}
+
+input:hover:focus::-moz-placeholder,
+textarea:hover:focus::-moz-placeholder {
+    color: #fff;
+    font-family: raleway;
+}
+
+input:hover::placeholder,
+textarea:hover::placeholder {
+    color: #fff;
+    font-size: 15px;
+    font-family: raleway;
+}
+
+input:hover:focus::placeholder,
+textarea:hover:focus::placeholder {
+    color: #fff;
+    font-family: raleway;
+}
+
+input:hover::placeholder,
+textarea:hover::placeholder {
+    color: #fff;
+    font-size: 15px;
+    font-family: raleway;
+}
+
+input:hover:focus::-ms-placeholder,
+textarea:hover::focus:-ms-placeholder {
+    color: #fff;
+    font-family: raleway;
+}
+
+#form {
+    position: relative;
+    width: 100%;
+    margin: 0px auto 0px auto;
+    font-family: raleway;
+}
+
+input {
+    font-family: raleway;
+    font-size: 15px;
+    width: 100%;
+    height: 50px;
+    padding: 0px 12px 0px 12px;
+    background: transparent;
+    outline: none;
+    color: #726659;
+    border: solid 1px #eee;
+    border-bottom: none;
+    transition: all 0.9s ease-in-out;
+    -webkit-transition: all 0.9s ease-in-out;
+    -moz-transition: all 0.9s ease-in-out;
+    -ms-transition: all 0.9s ease-in-out;
+}
+
+input:hover {
+    background: #ccc;
+    color: #fff;
+    font-family: raleway;
+}
+
+textarea {
+    width: 100%;
+    max-width: 100%;
+    height: 110px;
+    max-height: 110px;
+    padding: 15px;
+    background: transparent;
+    outline: none;
+    color: #000;
+    font-family: raleway;
+    font-size: 25px;
+    border: solid 1px #eee;
+    transition: all 0.9s ease-in-out;
+    -webkit-transition: all 0.9s ease-in-out;
+    -moz-transition: all 0.9s ease-in-out;
+    -ms-transition: all 0.9s ease-in-out;
+}
+
+textarea:hover {
+    background: #ccc;
+    color: #fff;
+    font-family: raleway;
+}
+
+#submit {
+    width: 100%;
+    padding: 0;
+    font-family: raleway;
+    font-size: 20px;
+    color: #000;
+    outline: none;
+    cursor: pointer;
+    border: solid 1px #eee;
+    border-top: none;
+    margin-bottom: 0px;
+}
+
+#submit:hover {
+    color: #fff;
+    background-color: #ccc;
+}
+
+@media(max-width:991px) {
+    .listas {
+        color: rgb(195, 223, 235) !important;
+    }
+
+    #logomarca {
+        width: 50px;
+        height: 50px;
+    }
+}
